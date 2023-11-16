@@ -280,8 +280,12 @@ export const deleteUser = async (req: Request, res: Response) => {
 export const updatePassword = async (req: Request, res: Response) => {
   try {
     const { email } = req.body;
+    console.log(email);
+    
     if (!email) return res.status(400).send({ message: "email is required" });
-
+    console.log("here");
+    
+//PART STARTS HERE
     // if (updatepassword.rowsAffected[0] > 0) {
     //   return res.json({
     //     message: "Password updated successfully",
@@ -292,6 +296,8 @@ export const updatePassword = async (req: Request, res: Response) => {
     //     details: "An error occurred while updating the password.",
     //   });
     // }
+
+    //PART ENDS HERE
   } catch (error) {
     console.error("Error updating password:", error);
     res.status(500).json({ error: "Internal server error" });

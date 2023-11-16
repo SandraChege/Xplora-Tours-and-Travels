@@ -259,8 +259,11 @@ exports.deleteUser = deleteUser;
 const updatePassword = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email } = req.body;
+        console.log(email);
         if (!email)
             return res.status(400).send({ message: "email is required" });
+        console.log("here");
+        //PART STARTS HERE
         // if (updatepassword.rowsAffected[0] > 0) {
         //   return res.json({
         //     message: "Password updated successfully",
@@ -271,6 +274,7 @@ const updatePassword = (req, res) => __awaiter(void 0, void 0, void 0, function*
         //     details: "An error occurred while updating the password.",
         //   });
         // }
+        //PART ENDS HERE
     }
     catch (error) {
         console.error("Error updating password:", error);

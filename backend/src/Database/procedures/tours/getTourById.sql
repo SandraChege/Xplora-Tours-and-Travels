@@ -1,0 +1,7 @@
+CREATE OR ALTER PROCEDURE getTourById
+	@tourID VARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM tours
+    WHERE tourID = @tourID
+END

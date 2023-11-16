@@ -28,3 +28,7 @@ export const userLoginValidationSchema = joi.object({
     .required()
     .pattern(new RegExp("^[a-zA-Z0-9!@#%$&*()]{0,30}$")),
 });
+
+export const validateUserEmail = joi.object().keys({
+  email: joi.string().email().required(),
+});

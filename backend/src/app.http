@@ -3,10 +3,10 @@ POST http://localhost:4520/user/register
 Content-Type: application/json
 
 {
-    "userName":"Sandra Chege",
-    "email":"9superbikes@gmail.com",
-    "password":"30000001",
-    "phone_no":"0700000001"
+    "userName":"Bob Kiongo",
+    "email":"bobkiongo@gmail.com",
+    "password":"12345678",
+    "phone_no":"0711110000"
 }
 
 
@@ -15,17 +15,17 @@ POST http://localhost:4520/user/login
 Content-Type: application/json
 
 {
-    "email":"sandraChege@gmail.com",
-    "password":"360700000011"
+    "email":"joshuaotieno@gmail.com",
+    "password":"12345678"
 }
 
 ###getallUsers
 GET http://localhost:4520/user/getallusers
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5ZjcyOTY4NC02YTIwLTQ3YTAtODAwOC0wZjNmY2UzODAxOWYiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoic2FuZHJhQ2hlZ2VAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpc0RlbGV0ZWQiOmZhbHNlLCJXZWxjb21lZCI6ZmFsc2UsImlhdCI6MTcwMDA1ODY1MiwiZXhwIjoxNzAwMTQ1MDUyfQ.RZNgePxuzidoXCd1Heve8bg9ixUSBgUrdwaPt6iTJAA
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI4NzFkNGViZS0wNjFiLTQzMDAtYjYzOC1iNzc5ZmZlODk3NmYiLCJ1c2VyTmFtZSI6Ikpvc2h1YSBPdGllbm8iLCJlbWFpbCI6Impvc2h1YW90aWVub0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzRGVsZXRlZCI6dHJ1ZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTU0MzU2LCJleHAiOjE3MDAyNDA3NTZ9.cXNK7D0lYBP_v8UL6IdM-UgVOmRO1_K4ABjhVoh84mk
 
 ###checkuserdetails
 GET http://localhost:4520/user/checkuserdetails
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiJjNWU2ODZkMC1lNWIxLTQwNTktOGUxMi0xZDU0MmIwNWVlNDEiLCJ1c2VyTmFtZSI6IlNhbmRyYSBjaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiV2VsY29tZWQiOmZhbHNlLCJpYXQiOjE3MDAwNTA1MDQsImV4cCI6MTcwMDEzNjkwNH0.AX_K5Y0LIxIZTGffXRMoTX600l9VpOM0RsDpxsJUjy8
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI4NzFkNGViZS0wNjFiLTQzMDAtYjYzOC1iNzc5ZmZlODk3NmYiLCJ1c2VyTmFtZSI6Ikpvc2h1YSBPdGllbm8iLCJlbWFpbCI6Impvc2h1YW90aWVub0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzRGVsZXRlZCI6dHJ1ZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTU0MzU2LCJleHAiOjE3MDAyNDA3NTZ9.cXNK7D0lYBP_v8UL6IdM-UgVOmRO1_K4ABjhVoh84mk
 
 ###getoneuser
 GET http://localhost:4520/user/getoneuser
@@ -36,34 +36,99 @@ Content-Type: application/json
 }
 
 ###updateuser
-# POST http://localhost:4520/user/getoneuser
-# Content-Type: application/json
+Put http://localhost:4520/user/updateuser
+Content-Type: application/json
 
-# {
-#     "userName": "Sandra Chege",
-#     "phone_no":"0710000000"
-# }
+{
+    "userID":"0d19a457-3550-40bd-afc1-158ccd28332c",
+    "userName": "Perez Annan Odiyo",
+    "phone_no":"0797381912"
+}
 
-# ###deleteoneuser
-DELETE http://localhost:4520/user/deleteuser/7aa06d43-f383-4625-af8b-3f83ffe4e50b
+###deleteoneuser
+DELETE http://localhost:4520/user/deleteuser/a6454caa-6295-4c59-ad31-7b4d4e5cfb15
 
-# ###updatepassword
-# POST http://localhost:4500/user/updatepassword
-# Content-Type: application/json
+###updatepassword
+POST http://localhost:4520/user/updatepassword
+Content-Type: application/json
 
-# {
-#     "password": "12345678"
-# }
-# ######
+{
+    "email": "Annan@gmail.com",
+    "password": "11112222"
+}
 
-# ####
-# post http://localhost:4520/user/register
-# Content-Type: application/json
+###CREATE TOURS
+POST http://localhost:4520/tour/addtour
+Content-Type: application/json
 
-# {
-#     "userName":"Perez Annan",
-#     "email":"perez@gmail.com",
-#     "password":"30000023",
-#     "phone_no":"0700000000"
-# }
-########
+{
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/09/08/13/58/desert-1654439_1280.jpg",
+    "tourName": "Mombasa Dunes",
+    "tourDescription": "Find dunes in mombasa",
+    "tourPrice": "5000",
+    "tourStartDate": "2023-12-12",
+    "tourEndDateName": "2024-01-02",
+    "tourCount":"20"
+}
+###GET ALL TOURS
+GET http://localhost:4520/tour/getalltours
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTMxOTY2LCJleHAiOjE3MDAyMTgzNjZ9.etDW05XqmUBgDoayIWICNrY3LnHumbZ0gSlGwhejims
+
+###GET ONE TOUR
+GET http://localhost:4520/tour/gettour
+Content-Type: application/json
+
+{
+    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff"
+}
+
+###updateTour
+Put http://localhost:4520/tour/updatetour
+Content-Type: application/json
+
+{   
+    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff",
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/09/08/13/58/desert-1654439_1280.jpg",
+    "tourName": "Found Mombasa Dunes",
+    "tourDescription": "dunes in mombasa",
+    "tourPrice": "4000",
+    "tourStartDate": "2023-12-12",
+    "tourEndDateName": "2024-01-12",
+    "tourCount":"10"
+}
+
+###DELETE TOUR
+DELETE http://localhost:4520/tour/deletetour/35096da1-4b4d-4b23-97bf-659fb9d6a3ff
+
+###Addreview
+POST http://localhost:4520/review/addreview
+Content-Type: application/json
+
+{
+   "reviewContent":"Today is Friday",
+    "userID":"18a0a01a-8239-4a56-b7ed-1cbf11610c9f",
+    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff"
+}
+###GET ALL Reviews
+GET http://localhost:4520/review/getallreviews
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTMxOTY2LCJleHAiOjE3MDAyMTgzNjZ9.etDW05XqmUBgDoayIWICNrY3LnHumbZ0gSlGwhejims
+
+###GET ONE REVIEW
+GET http://localhost:4520/review/getonereview
+Content-Type: application/json
+
+{
+    "reviewID":"2fbc8dab-6322-4004-b1b6-bddfc7085b4b"
+}
+
+###updateReview
+Put http://localhost:4520/review/updatereview
+Content-Type: application/json
+
+{   
+    "reviewID":"5659aeec-793e-44fa-aef4-ff1f10530df4",
+    "reviewContent": "Mombasa is a cool place to spend your holiday"
+}
+
+###DELETE TOUR
+DELETE http://localhost:4520/review/deletereview/5659aeec-793e-44fa-aef4-ff1f10530df4
