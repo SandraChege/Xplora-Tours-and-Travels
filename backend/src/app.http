@@ -130,5 +130,42 @@ Content-Type: application/json
     "reviewContent": "Mombasa is a cool place to spend your holiday"
 }
 
-###DELETE TOUR
+###DELETE REVIEW
 DELETE http://localhost:4520/review/deletereview/5659aeec-793e-44fa-aef4-ff1f10530df4
+
+###Add BOOKING
+POST http://localhost:4520/booking/addbooking
+Content-Type: application/json
+
+{
+    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff",
+    "totalprice":"67000",
+    "totalBookCount":"15",
+    "userID":"18a0a01a-8239-4a56-b7ed-1cbf11610c9f"
+    
+}
+###GET ALL BOOKINGS
+GET http://localhost:4520/booking/getallbookings
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTMxOTY2LCJleHAiOjE3MDAyMTgzNjZ9.etDW05XqmUBgDoayIWICNrY3LnHumbZ0gSlGwhejims
+
+###GET ONE REVIEW
+GET http://localhost:4520/booking/getonebooking
+Content-Type: application/json
+
+{
+    "bookID":"a3f68e9a-089f-4552-85ad-d42394312053"
+}
+
+###updateReview
+PUT http://localhost:4520/booking/updatebooking
+Content-Type: application/json
+
+{   
+    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff",
+    "totalprice":"70000",
+    "totalBookCount":"25",
+    "userID":"18a0a01a-8239-4a56-b7ed-1cbf11610c9f"
+}
+
+###DELETE TOUR
+DELETE http://localhost:4520/booking/deletebooking/a3f68e9a-089f-4552-85ad-d42394312053

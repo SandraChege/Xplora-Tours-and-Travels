@@ -82,6 +82,7 @@ export const getTour = async (req: Request, res: Response) => {
     console.log(error);
   }
 };
+
 //UPDATE TOUR
 export const updateTourDetails = async (req: Request, res: Response) => {
   try {

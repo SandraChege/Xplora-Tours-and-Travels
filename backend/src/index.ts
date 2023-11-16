@@ -5,6 +5,7 @@ import user_router from "./Routes/userRoutes";
 import cors from "cors";
 import tour_router from "./Routes/tourRoutes";
 import review_router from "./Routes/reviewRoutes";
+import booking_router from "./Routes/bookingRoutes";
 
 dotenv.config();
 const port = process.env.PORT;
@@ -17,6 +18,7 @@ app.use(urlencoded({ extended: true }));
 app.use("/user", user_router);
 app.use("/tour", tour_router);
 app.use("/review", review_router);
+app.use("/booking", booking_router)
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res.json({
