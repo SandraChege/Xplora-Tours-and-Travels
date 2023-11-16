@@ -32,7 +32,7 @@ GET http://localhost:4520/user/getoneuser
 Content-Type: application/json
 
 {
-    "email": "9superbikes@gmail.com"
+    "email": "michellewambui@gmail.com"
 }
 
 ###updateuser

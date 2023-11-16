@@ -2,10 +2,13 @@ import dotenv from "dotenv";
 import { NextFunction, Request, Response } from "express";
 dotenv.config({ path: "./.env" });
 import jwt from "jsonwebtoken";
-import { User } from "../interface/user";
+import { User, User1 } from "../interface/user";
 
 export interface ExtendedUser extends Request {
   info?: User;
+}
+export interface ExtendedUser1 extends Request {
+  info?: User1;
 }
 
 export const verifyToken = (

@@ -16,3 +16,11 @@ export interface updatUser {
   userName: string;
   phone_no: string;
 }
+
+export interface User1 {
+  name: string;
+  email: string;
+  userID: string;
+  role: string;
+  phone_no: string;
+}

@@ -9,7 +9,7 @@ import {
   userLoginValidationSchema,
   userRegisterValidationSchema,
 } from "../Validators/userValidator";
-import { ExtendedUser } from "../middelwares/verifytoken";
+import { ExtendedUser, ExtendedUser1 } from "../middelwares/verifytoken";
 import { execute } from "../helpers/dbHelper";
 import { updatUser } from "../interface/user";
 
