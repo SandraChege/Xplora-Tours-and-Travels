@@ -215,6 +215,7 @@ const updateUserDetails = (req, res) => __awaiter(void 0, void 0, void 0, functi
     try {
         const { userID, userName, phone_no } = req.body;
         if (!userID || !userName || !phone_no) {
+            console.log(req.body);
             // const updatedUserDetails: updatUser = {
             //   userID,
             //   userName,

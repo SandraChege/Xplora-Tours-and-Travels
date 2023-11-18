@@ -234,6 +234,8 @@ export const updateUserDetails = async (req: Request, res: Response) => {
     const { userID, userName, phone_no } = req.body;
 
     if (!userID || !userName || !phone_no) {
+      console.log(req.body);
+      
       // const updatedUserDetails: updatUser = {
       //   userID,
       //   userName,
