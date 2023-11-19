@@ -14,7 +14,7 @@ export interface LoginUser extends Request {
 export interface updatUser {
   userID: string;
   userName: string;
-  phone_no: string;
+  // email: string;
 }
 
 export interface User1 {

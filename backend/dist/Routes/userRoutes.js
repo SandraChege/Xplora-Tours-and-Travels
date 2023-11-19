@@ -13,7 +13,7 @@ user_router.post("/register", userControllers_1.registerUser);
 user_router.post("/login", userControllers_1.loginUser);
 user_router.get("/checkuserdetails", verifytoken_1.verifyToken, userControllers_1.checkUserDetails);
 user_router.get("/getoneuser", userControllers_1.getOneUser);
-user_router.post("/updateuser", userControllers_1.updateUserDetails);
+user_router.put("/updateuser", userControllers_1.updateUserDetails);
 user_router.delete("/deleteuser/:id", userControllers_1.deleteUser);
 user_router.post("/updatepassword", userControllers_1.updatePassword);
 exports.default = user_router;

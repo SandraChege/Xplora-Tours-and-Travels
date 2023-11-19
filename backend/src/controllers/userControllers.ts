@@ -231,29 +231,31 @@ export const getOneUser = async (req: Request, res: Response) => {
 //UPDATE USER
 export const updateUserDetails = async (req: Request, res: Response) => {
   try {
-    const { userID, userName, phone_no } = req.body;
+    const { userID, userName } = req.body;
 
-    if (!userID || !userName || !phone_no) {
-      console.log(req.body);
-      
-      // const updatedUserDetails: updatUser = {
-      //   userID,
-      //   userName,
-      //   phone_no,
-      // };
-      // const updateuserprocedureName = "updateUserDetails";
-      // const params = updatedUserDetails;
-      // const result = await execute(updateuserprocedureName, params);
-      // const user = result.recordset[0];
-      // console.log(user);
+    if (!userID || !userName) {
+      return res.status(400).json({
+        error: "Invalid request",
+        details:
+          "Both userID and userName are required for updating user details.",
+      });
     }
-    return res.status(400).json({
-      error: "User details update failed",
-      details: "An error occurred while updating the user details.",
-    });
+
+    const updatedUser: updatUser = {
+      userID,
+      userName,
+      // email,
+    };
+    const updateuserprocedureName = "updateUserDetails";
+    const params = updatedUser;
+    await execute(updateuserprocedureName, params);
+    return res.send({ message: "User updated successfully" });
+
   } catch (error) {
     console.error("Error updating user details:", error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).send({
+      error: "Internal server error"
+    });
   }
 };
 
@@ -283,11 +285,11 @@ export const updatePassword = async (req: Request, res: Response) => {
   try {
     const { email } = req.body;
     console.log(email);
-    
+
     if (!email) return res.status(400).send({ message: "email is required" });
     console.log("here");
-    
-//PART STARTS HERE
+
+    //PART STARTS HERE
     // if (updatepassword.rowsAffected[0] > 0) {
     //   return res.json({
     //     message: "Password updated successfully",

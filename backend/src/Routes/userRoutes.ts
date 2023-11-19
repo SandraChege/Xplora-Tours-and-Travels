@@ -21,7 +21,7 @@ user_router.post("/register", registerUser);
 user_router.post("/login", loginUser);
 user_router.get("/checkuserdetails", verifyToken, checkUserDetails);
 user_router.get("/getoneuser", getOneUser);
-user_router.post("/updateuser", updateUserDetails);
+user_router.put("/updateuser", updateUserDetails);
 user_router.delete("/deleteuser/:id", deleteUser);
 user_router.post("/updatepassword", updatePassword);
 
