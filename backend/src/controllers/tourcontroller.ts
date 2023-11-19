@@ -144,11 +144,11 @@ export const deleteTour = async (req: Request, res: Response) => {
     }
     console.log(`tour id IS:${tourID}`);
 
-    const result = await execute("deleteUser", { tourID });
+    const result = await execute("deletetour", { tourID });
 
     console.log(result.recordset);
 
-    res.send({ message: "user deleted successfuly" });
+    res.send({ message: "tour deleted successfuly" });
   } catch (error) {
     return res.status(500).json({
       message: error,

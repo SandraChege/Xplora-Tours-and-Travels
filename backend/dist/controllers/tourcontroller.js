@@ -122,9 +122,9 @@ const deleteTour = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
             return res.send({ message: "enter id" });
         }
         console.log(`tour id IS:${tourID}`);
-        const result = yield (0, dbHelper_1.execute)("deleteUser", { tourID });
+        const result = yield (0, dbHelper_1.execute)("deletetour", { tourID });
         console.log(result.recordset);
-        res.send({ message: "user deleted successfuly" });
+        res.send({ message: "tour deleted successfuly" });
     }
     catch (error) {
         return res.status(500).json({

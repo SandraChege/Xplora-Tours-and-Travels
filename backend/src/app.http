@@ -26,7 +26,7 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2
 
 ###checkuserdetails
 GET http://localhost:4520/user/checkuserdetails
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI4NzFkNGViZS0wNjFiLTQzMDAtYjYzOC1iNzc5ZmZlODk3NmYiLCJ1c2VyTmFtZSI6Ikpvc2h1YSBPdGllbm8iLCJlbWFpbCI6Impvc2h1YW90aWVub0BnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlzRGVsZXRlZCI6dHJ1ZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTU0MzU2LCJleHAiOjE3MDAyNDA3NTZ9.cXNK7D0lYBP_v8UL6IdM-UgVOmRO1_K4ABjhVoh84mk
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMzYwOTI1LCJleHAiOjE3MDA0NDczMjV9.UJvrDjQg66Y7Ul6iy4nn_XuNQLb6neYWVriio713odc
 
 ###getoneuser
 GET http://localhost:4520/user/getoneuser
@@ -80,7 +80,7 @@ GET http://localhost:4520/tour/gettour
 Content-Type: application/json
 
 {
-    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff"
+    "tourID":"2cb0844c-0ca2-4141-80e2-6ea8e298f1b1"
 }
 
 ###updateTour
@@ -88,18 +88,18 @@ Put http://localhost:4520/tour/updatetour
 Content-Type: application/json
 
 {   
-    "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff",
+    "tourID":"bbc627d2-33e4-41cd-9d5b-42f5673a3a92",
     "imageUrl": "https://cdn.pixabay.com/photo/2016/09/08/13/58/desert-1654439_1280.jpg",
-    "tourName": "Found Mombasa Dunes",
-    "tourDescription": "dunes in mombasa",
-    "tourPrice": "4000",
+    "tourName": "Kiambu National Park",
+    "tourDescription": "Kiambu National Park",
+    "tourPrice": "5000",
     "tourStartDate": "2023-12-12",
     "tourEndDateName": "2024-01-12",
-    "tourCount":"10"
+    "tourCount":"20"
 }
 
 ###DELETE TOUR
-DELETE http://localhost:4520/tour/deletetour/35096da1-4b4d-4b23-97bf-659fb9d6a3ff
+DELETE http://localhost:4520/tour/deletetour/2cb0844c-0ca2-4141-80e2-6ea8e298f1b1
 
 ###Addreview
 POST http://localhost:4520/review/addreview
@@ -149,7 +149,7 @@ Content-Type: application/json
 GET http://localhost:4520/booking/getallbookings
 token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwMTMxOTY2LCJleHAiOjE3MDAyMTgzNjZ9.etDW05XqmUBgDoayIWICNrY3LnHumbZ0gSlGwhejims
 
-###GET ONE REVIEW
+###GET ONE BOOKING
 GET http://localhost:4520/booking/getonebooking
 Content-Type: application/json
 
