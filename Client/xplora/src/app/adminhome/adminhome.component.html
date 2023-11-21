@@ -1,0 +1,73 @@
+<app-admindashboard></app-admindashboard>
+<div class="" id="alltours">
+  <div id="tours">
+    <!-- <div class="rounded-[8px] mytour" *ngFor="let tour of tours">
+      <img src="{{ tour.imageUrl }}" alt="" />
+      <p>{{ tour.tourName }}</p>
+      <p>{{ tour.tourPrice | currency : "KES" }}</p>
+      <p>{{ tour.tourDescription }}</p>
+      <div class="flex gap-x-[20px]">
+        <p>From:{{ tour.tourStartDate | date : "mediumDate" }}</p>
+        <p>To:{{ tour.tourEndDateName | date : "mediumDate" }}</p>
+      </div>
+      <div class="mybuttons">
+        <button class="del" (click)="deleteTour(tour.tourID)"><a>Delete</a></button> 
+        <button class="bg-[#5BD7B6]" (click)="updateTour(tour.tourID)"><a>Update</a></button>
+      </div>
+    </div> -->
+    <table>
+          <thead>
+            <tr>
+              <th class="px-4 py-2">Image</th>
+              <th class="px-4 py-2">Tour Name</th>
+              <th class="px-4 py-2">Tour Price</th>
+              <th class="px-4 py-2" >Tour Description</th>
+              <th class="px-4 py-2">Start Date</th>
+              <th class="px-4 py-2">End Date</th>
+              <th class="px-4 py-2"></th>
+              <th class="px-4 py-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tour of tours">
+              <td class="image"><img src="{{ tour.imageUrl }}" alt="Tour Image" /></td>
+              <td>{{ tour.tourName }}</td>
+              <td>{{ tour.tourPrice | currency : "KES" }}</td>
+              <td>{{ tour.tourDescription }}</td>
+              <td>{{ tour.tourStartDate | date : "mediumDate" }}</td>
+              <td>{{ tour.tourEndDateName | date : "mediumDate" }}</td>
+              <td><button class="del" (click)="deleteTour(tour.tourID)" style="padding:10px; background-color: #EF4444; border-radius: 10px;"><a>Delete</a></button> </td>
+              <td><button class="bg-[#5BD7B6]" (click)="updateTour(tour.tourID)" style="padding:10px; border-radius: 10px;"><a>Update</a></button></td>
+            </tr>
+          </tbody>
+        </table>
+    <!-- FORM ENDS HERE-->
+    <div class="overlay"  *ngIf="showForm">
+      <!-- <div class="overlay" (click)="hideForm()"></div> -->
+      <div class="form-container show-form">
+        <form [formGroup]="tourForm">
+          <label for="">Tour Name</label>
+          <input type="text" [(ngModel)]="updatedTour.tourName" formControlName="tourName"  class="p-4 border-gray-200 border-[0.5px] outline-none">
+
+          <label for="">Tour Description</label>
+          <input type="text" [(ngModel)]="updatedTour.tourDescription" formControlName="tourDescription" class="p-4 border-gray-200 border-[0.5px] outline-none">
+
+          <label for="">Tour Price</label>
+          <input type="number" [(ngModel)]="updatedTour.tourPrice" formControlName="tourPrice" class="p-4 border-gray-200 border-[0.5px] outline-none">
+
+          <label for="">Start Date</label>
+          <input type="text" [(ngModel)]="updatedTour.tourStartDate " formControlName="tourStartDate" class="p-4 border-gray-200 border-[0.5px] outline-none">
+
+          <label for="">End Date</label>
+          <input type="text" [(ngModel)]="updatedTour.tourEndDateName" formControlName="tourEndDateName" class="p-4 border-gray-200 border-[0.5px] outline-none">
+
+          <div class="buttons">
+            <button class="bg-[#4caf50] text-white px-4 py-2 rounded-md" (click)="saveChanges()">Save Changes</button>
+            <button (click)="hideForm()" class="bg-[#f44336] text-white px-4 py-2 rounded-md">Close Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--FORM ENDS HERE -->
+  </div>
+</div>

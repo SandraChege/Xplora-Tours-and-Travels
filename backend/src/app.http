@@ -143,8 +143,8 @@ Content-Type: application/json
 
 {
     "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff",
-    "totalprice":"69000",
-    "totalBookCount":"150",
+    "totalprice":"1000",
+    "totalBookCount":"1",
     "userID":"18a0a01a-8239-4a56-b7ed-1cbf11610c9f"
     
 }
@@ -157,7 +157,7 @@ GET http://localhost:4520/booking/getonebooking
 Content-Type: application/json
 
 {
-    "bookID":"a3f68e9a-089f-4552-85ad-d42394312053"
+    "bookID":"17137267-02a3-4e78-9aa6-71f6ab438d07"
 }
 
 ###updatebooking
@@ -166,9 +166,10 @@ Content-Type: application/json
 
 {   
     "tourID":"35096da1-4b4d-4b23-97bf-659fb9d6a3ff",
-    "totalprice":"70000",
-    "totalBookCount":"25",
-    "userID":"18a0a01a-8239-4a56-b7ed-1cbf11610c9f"
+    "totalprice":"50000",
+    "totalBookCount":"10",
+    "userID":"18a0a01a-8239-4a56-b7ed-1cbf11610c9f",
+    "bookID": "ba861b72-497c-4429-8326-be6d19263862"
 }
 
 ###DELETE BOOKING

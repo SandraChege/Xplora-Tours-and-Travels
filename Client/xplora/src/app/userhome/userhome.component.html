@@ -1,0 +1,36 @@
+<app-userdashboard></app-userdashboard>
+<div class="" id="alltours">
+  <div id="tours">
+    <div class="rounded-[8px] mytour" *ngFor="let tour of tours">
+      <img src="{{ tour.imageUrl }}" alt="" />
+      <p>{{ tour.tourName }}</p>
+      <p>{{ tour.tourPrice | currency : "KES" }}</p>
+      <p>{{ tour.tourDescription }}</p>
+      <p>Available slots: {{tour.tourCount}}</p>
+      <div class="flex gap-x-[20px]">
+        <p>From:{{ tour.tourStartDate | date : "mediumDate" }}</p>
+        <p>To:{{ tour.tourEndDateName | date : "mediumDate" }}</p>
+      </div>
+      <div class="mybuttons">
+        <!-- <button class="del" (click)="deleteTour(tour.tourID)"><a>Delete</a></button>  -->
+        <button class="bg-[#5BD7B6]"  (click)="bookTour(tour.tourID)"><a>BOOK</a></button>
+      </div>
+    </div>
+
+    <!-- FORM ENDS HERE-->
+    <div class="overlay"  *ngIf="showForm">
+      <div class="form-container show-form">
+        <form [formGroup]="bookForm">
+          <label for="">Number of people:</label>
+          <input type="number" formControlName="totalBookCount" class="p-4 border-gray-200 border-[0.5px] outline-none">
+
+          <div class="buttons">
+            <button class="bg-[#4caf50] text-white px-4 py-2 rounded-md" (click)="saveChanges()">Save Changes</button>
+            <button (click)="hideForm()" class="bg-[#f44336] text-white px-4 py-2 rounded-md">Close Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--FORM ENDS HERE -->
+  </div>
+</div>  

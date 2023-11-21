@@ -1,0 +1,68 @@
+/* #users{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+#users .addbutton{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: 8px;
+}
+#users div{
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgreen);
+}
+#users div p{
+    padding-bottom: 10px;
+}
+#users div .mybuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#users div button{
+    background-color: var(--green);
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+} */
+.destinationcontainer {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.addtour {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  /* background-color: brown; */
+  justify-content: center;
+  align-items: center;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+}
+.container1 {
+  display: flex;
+  /* width: 80%; */
+  padding: 10px;
+  /* background-color: blue; */
+}
+.container2 {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+}
+.container2 input{
+    width: 30vw;
+}

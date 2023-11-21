@@ -66,7 +66,7 @@ export const getBooking = async (req: Request, res: Response) => {
     const procedureName = "getBookingById";
     const result = await execute(procedureName, { bookID });
 
-    res.json(result.recordset[0]);
+    res.json(result.recordset);
   } catch (error) {
     console.log(error);
   }
@@ -88,15 +88,19 @@ export const updateBookingDetails = async (req: Request, res: Response) => {
 
       const updatebookingprocedureName = "updatebookingDetails";
       const params = updatebookingDetails;
+      
+      console.log(updatebookingDetails);
+      
 
       await execute(updatebookingprocedureName, params);
 
-      res.send("Booking Updated Successfully");
+      return res.status(200).json({ message: "Booking Updated Successfully" });
     } else {
       return res.send({
         error: "Enter required booking details",
       });
     }
+
   } catch (error) {
     console.error("Error updating booking details:", error);
     res.status(500).json({ error: "Internal server error" });

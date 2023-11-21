@@ -1,0 +1,27 @@
+<app-admindashboard></app-admindashboard>
+<div class="overflow-x-auto">
+  <table class="table-auto min-w-full">
+    <thead>
+      <tr>
+        <th class="px-4 py-2">Name</th>
+        <th class="px-4 py-2">Phone Number</th>
+        <th class="px-4 py-2">Email</th>
+        <th class="px-4 py-2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUsers" class="even:bg-gray-100">
+        <td class="border px-4 py-2">{{ user.userName }}</td>
+        <td class="border px-4 py-2">{{ user.phone_no }}</td>
+        <td class="border px-4 py-2">{{ user.email }}</td>
+        <td class="border px-4 py-2">
+          <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"  (click)="deleteUser(user.userID)">
+            <!-- <p>{{user.userID}}</p> -->
+            <a>Delete</a>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

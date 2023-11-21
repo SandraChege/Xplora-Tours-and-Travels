@@ -65,7 +65,7 @@ const getBooking = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
             return res.send({ message: error.details[0].message });
         const procedureName = "getBookingById";
         const result = yield (0, dbHelper_1.execute)(procedureName, { bookID });
-        res.json(result.recordset[0]);
+        res.json(result.recordset);
     }
     catch (error) {
         console.log(error);
@@ -86,8 +86,9 @@ const updateBookingDetails = (req, res) => __awaiter(void 0, void 0, void 0, fun
             };
             const updatebookingprocedureName = "updatebookingDetails";
             const params = updatebookingDetails;
+            console.log(updatebookingDetails);
             yield (0, dbHelper_1.execute)(updatebookingprocedureName, params);
-            res.send("Booking Updated Successfully");
+            return res.status(200).json({ message: "Booking Updated Successfully" });
         }
         else {
             return res.send({

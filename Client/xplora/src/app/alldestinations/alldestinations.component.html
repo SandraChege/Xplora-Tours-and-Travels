@@ -1,0 +1,66 @@
+<app-admindashboard></app-admindashboard>
+<div class="destinationcontainer">
+    <div class="addtour" >
+    <h2 >Add a destination</h2>
+
+    <form  [formGroup] ="addTourForm" (ngSubmit)="addNewTour()">
+       <div class="container1 gap-x-[5rem]">
+            <div class="container2">
+                <label for=""class="text-[1rem]">Image:</label> 
+                <input type="text" formControlName="imageUrl"  placeholder="Image Url" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addTourForm.get('imageUrl')?.invalid && addTourForm.get('imageUrl')?.touched" class="text-red-500">Image is required</div> 
+            </div>
+            <div class="container2">
+                <label for="" class="text-[1rem]">Tour Name</label>
+                <input type="text" formControlName="tourName" placeholder="Enter tour name" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addTourForm.get('tourName')?.invalid && addTourForm.get('tourName')?.touched" class="text-red-500">Tour name is required</div>
+            </div>
+       </div>
+
+       <div class="container1 gap-x-[5rem]">
+            <div class="container2">
+                <label for="" class="text-[1rem]">Price</label>
+                <input type="text" formControlName="tourPrice" placeholder="Enter the price" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addTourForm.get('tourPrice')?.invalid && addTourForm.get('tourPrice')?.touched" class="text-red-500">Price is required</div>
+            </div>
+            <div class="container2">
+                <label for="" class="text-[1rem]">Available slots</label>
+                <input type="text" formControlName="tourCount" placeholder="Enter tour type" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addTourForm.get('tourCount')?.invalid && addTourForm.get('tourCount')?.touched" class="text-red-500">Tour count is required</div>
+            </div>
+       </div>
+
+        <div class="container1 gap-x-[5rem]">
+            <div class="container2">
+                <label for="" class="text-[1rem]">Start From</label>
+                <input type="date" formControlName="tourStartDate" placeholder="Enter tour type" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addTourForm.get('tourStartDate')?.invalid && addTourForm.get('tourStartDate')?.touched" class="text-red-500">Start Date is required and cannot be in the past</div>
+            </div>
+            <div class="container2">
+                <label for="" class="text-[1rem]">End on</label>
+                <input type="date" formControlName="tourEndDateName" placeholder="Enter tour type" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+                <div *ngIf="addTourForm.get('tourEndDateName')?.invalid && addTourForm.get('tourEndDateName')?.touched" class="text-red-500">End Date is required</div>
+            </div>
+        </div>
+
+        <div class="container1 flex flex-col">
+            <label for="" class="text-[1rem]">Destination Description</label>
+            <input type="text" formControlName="tourDescription" placeholder="Enter destination description" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[8px] mt-[5px]">
+            <div *ngIf="addTourForm.get('tourDescription')?.invalid && addTourForm.get('tourDescription')?.touched" class="text-red-500">Description is required</div>
+        </div>
+
+        <div class="container1 description flex flex-col" style="outline: none;">
+            <input type="submit" value="Add Destination" class="rounded-[5px] bg-[#5BD7B6] rounded-[2px] outline-none px-4 py-[8px] mt-[1rem] hover:cursor-pointer">
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
