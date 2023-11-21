@@ -41,10 +41,15 @@ table thead tr th {
 table tbody tr {
   background-color: #f8f8f8;
   border: solid 1px #d4d4d4;
+  /* display: flex;
+  flex-direction: column;
+  align-items: stretch; */
 }
 table tbody tr td {
   padding: 10px;
   border: 1px solid #d4d4d4;
+  width: 200px;
+  /* align-items: stretch; */
 }
 table img {
   border-radius: 50%;

@@ -1,4 +1,8 @@
 <app-admindashboard></app-admindashboard>
+<div>
+  <label for="">Search</label>
+  <input type="text" [(ngModel)]="searchtext" name="" id="">
+</div>
 <div class="overflow-x-auto">
   <table class="table-auto min-w-full">
     <thead>
@@ -10,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of allUsers" class="even:bg-gray-100">
+      <tr *ngFor="let user of allUsers | searchpipe:searchtext" class="even:bg-gray-100" >
         <td class="border px-4 py-2">{{ user.userName }}</td>
         <td class="border px-4 py-2">{{ user.phone_no }}</td>
         <td class="border px-4 py-2">{{ user.email }}</td>

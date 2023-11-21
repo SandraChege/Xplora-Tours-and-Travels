@@ -11,6 +11,7 @@ import { AdminService } from '../service/admin/admin.service';
 export class AllusersComponent {
   allUsers: AllUserDetails[] = [];
   appuser: any;
+  searchtext=""
 
   constructor(private adminservice: AdminService) {}
   ngOnInit() {

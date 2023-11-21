@@ -18,10 +18,10 @@
     <table>
           <thead>
             <tr>
-              <th class="px-4 py-2">Image</th>
+              <!-- <th class="px-4 py-2">Image</th> -->
               <th class="px-4 py-2">Tour Name</th>
               <th class="px-4 py-2">Tour Price</th>
-              <th class="px-4 py-2" >Tour Description</th>
+              <!-- <th class="px-4 py-2" >Tour Description</th> -->
               <th class="px-4 py-2">Start Date</th>
               <th class="px-4 py-2">End Date</th>
               <th class="px-4 py-2"></th>
@@ -30,10 +30,10 @@
           </thead>
           <tbody>
             <tr *ngFor="let tour of tours">
-              <td class="image"><img src="{{ tour.imageUrl }}" alt="Tour Image" /></td>
+              <!-- <td class="image"><img src="{{ tour.imageUrl }}" alt="Tour Image" /></td> -->
               <td>{{ tour.tourName }}</td>
               <td>{{ tour.tourPrice | currency : "KES" }}</td>
-              <td>{{ tour.tourDescription }}</td>
+              <!-- <td>{{ tour.tourDescription }}</td> -->
               <td>{{ tour.tourStartDate | date : "mediumDate" }}</td>
               <td>{{ tour.tourEndDateName | date : "mediumDate" }}</td>
               <td><button class="del" (click)="deleteTour(tour.tourID)" style="padding:10px; background-color: #EF4444; border-radius: 10px;"><a>Delete</a></button> </td>

@@ -27,6 +27,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserbookingsComponent } from './userbookings/userbookings.component';
 import { UserreviewComponent } from './userreview/userreview.component';
+import { SearchpipePipe } from './pipe/searchpipe.pipe';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -53,6 +54,7 @@ import { UserreviewComponent } from './userreview/userreview.component';
     ProfileComponent,
     UserbookingsComponent,
     UserreviewComponent,
+    SearchpipePipe,
   ],
   imports: [
     BrowserModule,
