@@ -3,10 +3,10 @@ POST http://localhost:4520/user/register
 Content-Type: application/json
 
 {
-    "userName":"Bob Kiongo",
-    "email":"bobkiongo@gmail.com",
+    "userName":"Isaac Kiptoo",
+    "email":"isaackiptoo@gmail.com",
     "password":"12345678",
-    "phone_no":"0711110000"
+    "phone_no":"0701110000"
 }
 
 
@@ -21,8 +21,7 @@ Content-Type: application/json
 
 ###getallUsers
 GET http://localhost:4520/user/getallusers
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwNDEwODYzLCJleHAiOjE3MDA0OTcyNjN9.zjtLU1Rmy0vraIhOvPPGpokZpGqe7C8pE2Ux3TcLwYc
-
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI5YTA1NTQzMC01YTcxLTQ2NDUtYjk0OS1kMzg3MzIyNDQyNjkiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaXNEZWxldGVkIjpmYWxzZSwicmVzZXRQYXNzd29yZCI6ZmFsc2UsIldlbGNvbWVkIjpmYWxzZSwiaWF0IjoxNzAwNzIzNDE4LCJleHAiOjE3MDA4MDk4MTh9.qOkdUXWU4I7VuyA-m3k-e36syEaD2U5GyXE9cRZV3sI
 
 ###checkuserdetails
 GET http://localhost:4520/user/checkuserdetails

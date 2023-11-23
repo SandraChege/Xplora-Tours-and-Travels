@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   loginForm!: FormGroup;
+  showSuccessMessage = false;
+  showErrorMessage = false;
 
   constructor(
     private fb: FormBuilder,
@@ -27,20 +29,26 @@ export class LoginComponent {
       // console.log(this.loginForm);
       // console.log(this.loginForm.value);
 
-      this.register.loginregistereduser(this.loginForm.value)
-        .then((data) => {
-          // console.log(data);
-          localStorage.setItem('token', data.token);
-          this.register.checkuserdetails().then((data) => {
-            console.log(data);
-            console.log(data.info.role);
+      this.register.loginregistereduser(this.loginForm.value).then((data) => {
+        // console.log(data);
+        localStorage.setItem('token', data.token);
+        this.register.checkuserdetails().then((data) => {
+          console.log(data);
+          console.log(data.info.role);
+
+          this.showSuccessMessage = true;
+
+          setTimeout(() => {
+            this.showSuccessMessage = false;
             if (data.info.role === 'user') {
               this.router.navigate(['user']);
             } else if (data.info.role === 'admin') {
-              this.router.navigate(['adminhome']);
+              this.router.navigate(['adminhome']); 
             }
-          });
-        });
+          }, 3000);
+        }
+        )
+      });
     }
   }
 }

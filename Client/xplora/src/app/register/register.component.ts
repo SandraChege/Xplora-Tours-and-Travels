@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
   registrationForm!: FormGroup;
+  showSuccessMessage = false;
 
-  constructor(private register: RegisterService, private router:Router) {
+  constructor(private register: RegisterService, private router: Router) {
     this.registrationForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -27,7 +28,13 @@ export class RegisterComponent {
     if (this.registrationForm.valid) {
       console.log(this.registrationForm);
       this.register.registerNewUser(this.registrationForm.value).then(() => {
-        this.router.navigate(['login']);
+        // Show success message
+        this.showSuccessMessage = true;
+
+        setTimeout(() => {
+          this.showSuccessMessage = false;
+          this.router.navigate(['login']);
+        }, 3000);
       });
     }
   }

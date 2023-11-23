@@ -35,3 +35,25 @@
 //     }
 //   }
 // }
+Cypress.Commands.add('loginUser', () => {
+  cy.visit('/login');
+  cy.get('[data-cy="email"]').type('9superbikes@gmail.com');
+  cy.get('[data-cy="password"]').type('12345678');
+  cy.get('[data-cy="login_user_btn"]')
+    .click()
+    .then((el) => {
+      cy.get('[data-cy="logged-in-success-popup"]').should('be.visible');
+      cy.location('pathname').should('eq', '/adminhome');
+    });
+});
+Cypress.Commands.add('registerUser', () => {
+  cy.visit('/register');
+  cy.get('[data-cy="userName"]').type('Jeniffer Sammy');
+  cy.get('[data-cy="userEmail"]').type('jeniffersammy@gmail.com');
+  cy.get('[data-cy="userphone"]').type('0789653421');
+  cy.get('[data-cy="userPassword"]').type('password123');
+  cy.get('[data-cy="register_user_btn"]').click().then((el) => {
+    cy.get('[data-cy="registered-success-popup"]').should('be.visible');
+    cy.location('pathname').should('eq', '/login');
+  });
+});
